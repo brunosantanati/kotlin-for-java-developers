@@ -27,14 +27,14 @@ class CardTest {
         assertEquals(10, c2.points)
 
         try {
-            val c3 = Card(value = 1, suit = 5)
+            Card(value = 1, suit = 5)
             fail("Should never get here")
         } catch (e: IllegalArgumentException) {
             println("good")
         }
 
         try {
-            val c3 = Card(value = 14, suit = 1)
+            Card(value = 14, suit = 1)
             fail("Should never get here")
         } catch (e: IllegalArgumentException) {
             println("good")
