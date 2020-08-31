@@ -14,8 +14,13 @@ class Card(val value: Int, val suit: Int) {
         }
 
     val valueName: String
-        get() {
-            return "Ace"
+        get() = when (value) {
+            1 -> "Ace"
+            in 2..10 -> value.toString()
+            11 -> "Jack"
+            12 -> "Queen"
+            13 -> "King"
+            else -> throw IllegalStateException()
         }
 
 }

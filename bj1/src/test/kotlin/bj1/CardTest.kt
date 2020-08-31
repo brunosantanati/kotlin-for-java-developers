@@ -13,25 +13,33 @@ class CardTest {
         assertEquals(1, c1.value)
         assertEquals(1, c1.suit)
         assertEquals("Spades", c1.suitName)
+        assertEquals("Ace", c1.valueName)
 
         assertEquals(13, c2.value)
         assertEquals(4, c2.suit)
         assertEquals("Diamonds", c2.suitName)
+        assertEquals("King", c2.valueName)
     }
 
     @Test
     fun t2(){
-        val x = if(3 < 4) "aa" else "bb"
+//        val x = if(3 < 4) "aa" else "bb"
+//
+//        val suit = 2
+//        val y = when (suit) {
+//            1 -> "Spades"
+//            2 -> "Hearts"
+//            else -> "Oops"
+//        }
+//
+//        println("x = ${x}")
+//        println("y = ${y}")
 
-        val suit = 2
-        val y = when (suit) {
-            1 -> "Spades"
-            2 -> "Hearts"
-            else -> "Oops"
-        }
-
-        println("x = ${x}")
-        println("y = ${y}")
+        val r = 1..4
+        println(r.contains(2))
+        println(2 in r)
+        println(r.contains(6))
+        println(6 in r)
     }
 
 }
