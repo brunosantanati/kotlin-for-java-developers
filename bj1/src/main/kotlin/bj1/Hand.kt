@@ -5,8 +5,10 @@ class Hand(val name: String) {
     //private val _cards: MutableList<Card> = mutableListOf<Card>()
     private val _cards = mutableListOf<Card>()
 
+    val cards:List<Card> get() = _cards
+
     fun add(card: Card) {
-        //TODO("Not yet implemented")
+        //TODO("Not yet implemented") //throws a NotImplementedError
         _cards.add(card)
     }
 
@@ -29,5 +31,5 @@ class Hand(val name: String) {
     }
 
     val points get() = _cards.sumBy { it.points }
-    
+
 }
