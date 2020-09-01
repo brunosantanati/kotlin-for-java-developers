@@ -5,8 +5,17 @@ import java.lang.IllegalStateException
 class Card(val value: Int, val suit: Int) {
 
     init {
-        require(value in 1..13)
-        require(suit in 1..4) //throws an IllegalArgumentException
+
+        val msg1 = fun(): String {
+            return "Bad face"
+        }
+
+        val msg2 = fun(): String {
+            return "Bad suit"
+        }
+
+        require(value in 1..13, msg1)
+        require(suit in 1..4, msg2) //throws an IllegalArgumentException
         //check(suit in 1..4) //throws an IllegalStateException
         //assert(suit in 1..4) //require to compile with assertions enabled
     }

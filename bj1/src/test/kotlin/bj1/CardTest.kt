@@ -30,14 +30,14 @@ class CardTest {
             Card(value = 1, suit = 5)
             fail("Should never get here")
         } catch (e: IllegalArgumentException) {
-            println("good")
+            println(e.message)
         }
 
         try {
             Card(value = 14, suit = 1)
             fail("Should never get here")
         } catch (e: IllegalArgumentException) {
-            println("good")
+            println(e.message)
         }
     }
 
