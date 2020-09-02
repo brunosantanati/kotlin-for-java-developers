@@ -32,4 +32,12 @@ class Hand(val name: String) {
 
     val points get() = _cards.sumBy { it.points }
 
+    fun renderHand(){
+        println("$name Hand")
+        _cards.forEach {
+            println(it.name)
+        }
+        println("$points points")
+    }
+
 }

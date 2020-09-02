@@ -37,9 +37,4 @@ class HandTest {
         println("${h.points} points")
     }
 
-    @Test
-    fun t2(){
-
-    }
-
 }
