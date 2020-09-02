@@ -1,0 +1,40 @@
+package bj1
+
+import org.junit.Test
+import kotlin.test.assertEquals
+
+class GameTest {
+
+    @Test
+    fun t1(){
+
+        val g = Game(shuffle = false)
+        assertEquals(48, g.deck.size)
+        assertEquals(2, g.ph.size) //player hand
+        assertEquals(2, g.dh.size) //dealer hand
+        assertEquals(4, g.ph.points)
+        assertEquals(6, g.dh.points)
+
+        g.hit()
+        assertEquals(47, g.deck.size)
+        assertEquals(3, g.ph.size) //player hand
+        assertEquals(2, g.dh.size) //dealer hand
+        assertEquals(9, g.ph.points)
+        assertEquals(6, g.dh.points)
+
+        g.hit()
+        assertEquals(46, g.deck.size)
+        assertEquals(4, g.ph.size) //player hand
+        assertEquals(2, g.dh.size) //dealer hand
+        assertEquals(15, g.ph.points)
+        assertEquals(6, g.dh.points)
+
+        g.stay()
+        assertEquals(44, g.deck.size)
+        assertEquals(4, g.ph.size) //player hand
+        assertEquals(4, g.dh.size) //dealer hand
+        assertEquals(15, g.ph.points)
+        assertEquals(21, g.dh.points)
+    }
+
+}
